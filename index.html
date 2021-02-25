@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./Assets/css/styles.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
               <h1 class="navbar-text ms-auto me-auto">
@@ -19,15 +19,15 @@
               <h1>
             </div>
           </nav>
-    </header>
+    </header> -->
 
     <main>
-        <div class="container-fluid ">
+        <div class="container-fluid">
             <div class="row appBody">
                 <div class="col-4 sideBar">
                     <h4>Search for a City</h4>
                     <input type="text">
-                    <button type="button" class="btn btn-primary"><i class="bi bi-search"></i></button>
+                    <button type="button" class="btn btn-primary" id="searchBtn"><i class="bi bi-search"></i></button>
                     <div class="list-group">
                         <button type="button" class="list-group-item list-group-item-action">A second item</button>
                         <button type="button" class="list-group-item list-group-item-action">A third button item</button>
@@ -35,7 +35,7 @@
                       </div>
                 </div>
                 <div class="col-8">
-                    <div class="weatherInformation">
+                    <div class="weatherInformation" id="weatherData">
                         <h2>Atlanta (2/21/2012)</h2>
                         <p>Temperature:</p>
                         <p>Humidity:</p>
@@ -43,6 +43,32 @@
                         <p>UV Index:</p>
                     </div>
                     
+
+                </div>
+            </div>
+            <div class="row fiveDayForecase">
+                <div class="col-2">
+                    <button class="day">Day 1</button>
+
+                </div>
+                <div class="col-2">
+                    <button class="day">Day 1</button>
+
+
+                </div>
+                <div class="col-2">
+                    <button class="day">Day 1</button>
+
+
+                </div>
+                <div class="col-2">
+                    <button class="day">Day 1</button>
+
+
+                </div>
+                <div class="col-2">
+                    <button class="day">Day 1</button>
+
 
                 </div>
             </div>

@@ -1,24 +1,22 @@
 body{
-    background-color: white;
+    background-image: url(../images/pexels-asad-photo-maldives-3601453.jpg);
 }
-
-.navbar-text{
-}
-
-
 
 .list-group{
     margin-top: 20px;
 }
 
 .sideBar{
-    background-color: rgb(228, 228, 228);
-    padding-top: 15px;
+    /* background-color: rgb(228, 228, 228);
+    opacity: 0.3;
+    padding-top: 15px; */
+    color: blanchedalmond;
 }
 
 .weatherInformation{
     border: solid 1px grey;
     padding: 15px;
+    color: white;
 }
 
 h2{
@@ -28,5 +26,22 @@ h2{
 .appBody{
     padding-top: 15px;
     min-height: 86vh;
+}
+
+.fiveDayForecase{
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    padding: 25px;
+    margin-bottom: 0%;
+}
+
+.day{
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    border: solid 2px;
 }
 
