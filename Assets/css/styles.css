@@ -1,18 +1,20 @@
 body{
-    background-color: #2f4353;
-    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);   
+    background: url(../images/pexels-frans-van-heerden-655794.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    /* background-color: #2f4353;
+    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);    */
     
 }
 
 .containerStyle{
-    background: url(../images/pexels-frans-van-heerden-655794.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    border-radius: 5px;
+    
+    /* border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
     border: solid rgb(14, 13, 13) 6px;
-    overflow: hidden;
+    overflow: hidden; */
 
 }
 
@@ -31,6 +33,7 @@ body{
     border: solid 1px grey;
     padding: 15px;
     color: white;
+    margin-bottom: 20px;
 }
 
 h2{
@@ -42,19 +45,21 @@ h2{
     min-height: 86vh;
 }
 
-.fiveDayForecase{
+.fiveDayForecastCards  .card{
+    width: 200px;
 
 }
 
-
-/* .btn .btn-secondary .p{
-    padding: 40px;
-    
-
-    
-} */
-
-.p-3{
-    padding: $spacer !important;
+.btn .btn-outline-secondary .p-5{
+    background-color: black;
+    opacity: 0.5;
 }
+
+.bgcolumns {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+
 
