@@ -1,7 +1,7 @@
 body{
     background: url(../images/pexels-frans-van-heerden-655794.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     height: 100vh;
     /* background-color: #2f4353;
     background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);    */
@@ -46,7 +46,8 @@ h2{
 }
 
 .fiveDayForecastCards  .card{
-    width: 200px;
+   height: 300px;
+    background: rgb(207, 220, 236);
 
 }
 
@@ -61,5 +62,27 @@ h2{
     padding: 20px;
 }
 
+span{
+    padding: 7px;
+    border-radius: 5px;
+}
 
 
+input#searchInput {
+    border-style: none;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+input#searchInput:focus {
+    border-style: none;
+}
+input.typeahead.tt-hint {
+    padding: 7px;
+}
+.tt-menu {
+    background-color: white;
+    width: 198px;
+    color: black;
+    padding: 10px;
+    border-style: ridge;
+}
