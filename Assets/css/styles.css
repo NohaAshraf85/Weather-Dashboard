@@ -2,34 +2,20 @@ body{
     background: url(../images/pexels-frans-van-heerden-655794.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    /* background-color: #2f4353;
-    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);    */
+    /* height: 100vh; */
     
 }
 
-.containerStyle{
-    
-    /* border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: solid rgb(14, 13, 13) 6px;
-    overflow: hidden; */
-
-}
 
 .list-group{
     margin-top: 20px;
 }
 
 .sideBar{
-    /* background-color: rgb(228, 228, 228);
-    opacity: 0.3;
-    padding-top: 15px; */
     color: blanchedalmond;
 }
 
-.weatherInformation{
+.weatherInformation{azq 
     border: solid 1px grey;
     padding: 15px;
     color: white;

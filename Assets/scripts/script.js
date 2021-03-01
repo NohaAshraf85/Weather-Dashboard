@@ -251,8 +251,6 @@ var states=[
   }
 ];
 
-
-
 $( document ).ready(function() {
  $("#resultsDisplay").css("display","none");
   var searchedItems =JSON.parse( localStorage.getItem("storedLocations"));
@@ -296,35 +294,6 @@ $( document ).ready(function() {
     source: substringMatcher(states)
   });
 });
-
-
-var searchBoxEl = document.querySelector('#searchBox');
-
-function handleSearchFormSearch(event) {
-  event.preventDefault();
-
-  var searchInputVal = document.querySelector('#searchInput').value;
-
-  if (!searchInputVal) {
-    console.error('You need a search input value!');
-    return;
-  }
-
-  var requestUrl = "api.openweathermap.org/data/2.5/forecast?q=" + searchInputVal + "&appid=c87e1cc3e31fb388f96417708873f99c";
-
-fetch(requestUrl)
-.then(function(response){
-  return response.json();
-})
-
-.then(function (data){
-  console.log(data);
-})
-
-}
-
-searchBoxEl.addEventListener('submit', handleSearchFormSearch);
-
 
 
 function search(event){
@@ -398,9 +367,10 @@ function displayItemresults(index)
   displayResults();
 
 }
+
 function displayResults(){
   $("#resultsDisplay").css("display","block");
-  var requextUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+statesfound.latitude+"&lon="+statesfound.longitude+"&exclude=hourly,minutely,alerts&appid=c87e1cc3e31fb388f96417708873f99c";
+  var requextUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+statesfound.latitude+"&lon="+statesfound.longitude+"&units=imperial&exclude=hourly,minutely,alerts&appid=c87e1cc3e31fb388f96417708873f99c";
 // var requestUrlFiveDay = "http://api.openweathermap.org/data/2.5/forecast?q=" + "New%20York%20City" + "&appid=c87e1cc3e31fb388f96417708873f99c"
 // var requestUrlCurrentDay = "api.openweathermap.org/data/2.5/weather?q=" + "New%20York%20City" + "&appid=c87e1cc3e31fb388f96417708873f99c"
 
