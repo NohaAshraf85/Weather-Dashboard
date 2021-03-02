@@ -377,6 +377,8 @@ function displayItemresults(index)
   {
     $("#btnLoction"+i).removeClass("active");
   }
+  $("#warning").css("display", "none");
+
   $("#btnLoction"+index).addClass("active");
   statesfound= storedLocations[index];
   displayResults();
@@ -430,6 +432,8 @@ fetch(requextUrl)
 }
 
 $("#searchBtn") .on("click", search);
+
+
 
 
 
