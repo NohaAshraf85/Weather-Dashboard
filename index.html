@@ -31,6 +31,7 @@
                         <h4>Search for a City</h4>
                     <input id="searchInput" class="typeahead" type="text" placeholder="Search">
                     <button type="button" class="btn btn-primary" id="searchBtn"><i class="bi bi-search"></i></button>
+                    <p id="warning">Please enter a valid search input, ex. a state in the US</p>
                     <div id="savedStates" class="list-group">
                       </div>
                     </form>
@@ -108,12 +109,15 @@
             </div> 
         </div>
     </main>
+    <!-- jQuery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- TypeAhead script -->
     <script src="./Assets/typeAheadScripts/bloodhound.min.js"></script>
     <script src="./Assets/typeAheadScripts/typeahead.bundle.min.js"></script>
     <script src="./Assets/typeAheadScripts/typeahead.jquery.min.js"></script>
+    <!-- Moment.js cdn for the dates -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-   
+   <!-- script file link -->
     <script src="./Assets/scripts/script.js"></script>
 </body>
 </html>

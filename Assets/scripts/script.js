@@ -251,15 +251,20 @@ var states=[
   }
 ];
 
+var long=0;
+var lat=0;
+var statesfound;
+var storedLocations=[];
+
 $( document ).ready(function() {
  $("#resultsDisplay").css("display","none");
+ $("#warning").css("display", "none");
   var searchedItems =JSON.parse( localStorage.getItem("storedLocations"));
   if (searchedItems){
     storedLocations=searchedItems;
     renderSidebar();
   }
  
-  
   var substringMatcher = function(strs) {
     return function findMatches(q, cb) {
       var matches, substringRegex;
@@ -296,23 +301,24 @@ $( document ).ready(function() {
   });
 });
 
-
 function search(event){
   long=0;
   lat=0;
   getLongLat();
   if(statesfound!=null)
   {
+    $("#warning").css("display","none");
     addToLocalStorage();
     displayResults();
+
+  }
+  else{
+    $("#warning").css("display","block");
+
   }
 
 
 }
-var long=0;
-var lat=0;
-var statesfound;
-var storedLocations=[];
 
 function getLongLat(){
 
@@ -329,7 +335,6 @@ function getLongLat(){
     long=0;
     lat=0;
   }
- console.log(statesfound);
 }
 
 function addToLocalStorage(){
@@ -339,6 +344,7 @@ function addToLocalStorage(){
     if(storedLocations[i].state==statesfound.state)
     {
       found=true;
+      $("#btnLoction"+i).addClass("active");
       break;
     }
   }
@@ -347,15 +353,17 @@ function addToLocalStorage(){
   storedLocations.push(statesfound);
   localStorage.setItem("storedLocations",JSON.stringify(storedLocations));
   renderSidebar();
+  $("#btnLoction"+(storedLocations.length-1)).addClass("active");
 }
 
 }
+
 function renderSidebar()
 {
   var renderedHtml="";
   for(var i=0;i<storedLocations.length;i++)
   {
-    renderedHtml+="<button type='button' class='list-group-item list-group-item-action' onclick='displayItemresults("+i+")' value='"+i+"'>"+storedLocations[i].state+"</button>"
+    renderedHtml+="<button type='button' id='btnLoction"+i+"' class='list-group-item list-group-item-action' onclick='displayItemresults("+i+")' value='"+i+"'>"+storedLocations[i].state+"</button>"
     
     
   }
@@ -365,6 +373,11 @@ function renderSidebar()
 
 function displayItemresults(index)
 {
+  for(var i=0;i<storedLocations.length;i++)
+  {
+    $("#btnLoction"+i).removeClass("active");
+  }
+  $("#btnLoction"+index).addClass("active");
   statesfound= storedLocations[index];
   displayResults();
 
@@ -373,8 +386,7 @@ function displayItemresults(index)
 function displayResults(){
   $("#resultsDisplay").css("display","block");
   var requextUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+statesfound.latitude+"&lon="+statesfound.longitude+"&units=imperial&exclude=hourly,minutely,alerts&appid=c87e1cc3e31fb388f96417708873f99c";
-// var requestUrlFiveDay = "http://api.openweathermap.org/data/2.5/forecast?q=" + "New%20York%20City" + "&appid=c87e1cc3e31fb388f96417708873f99c"
-// var requestUrlCurrentDay = "api.openweathermap.org/data/2.5/weather?q=" + "New%20York%20City" + "&appid=c87e1cc3e31fb388f96417708873f99c"
+
 
 fetch(requextUrl)
 .then(function(response){
@@ -390,12 +402,9 @@ fetch(requextUrl)
     $("#humidity"+i).text(data.daily[i+1].humidity);
   }
 
-    console.log(data);  
     $("#currentCityName").text(statesfound.state);
     var date = new Date(data.current.dt*1000);
-    //console.log(date);
-    //moment(data.current.dt).format()
-    $("#currentDate").text(moment(date).format("dddd, MMMM Do"));
+    $("#currentDate").text(moment(date).format("M/D/YYYY"));
     $("#currentTemp").text(data.current.temp);
     $("#currentHumidity").text(data.current.humidity);
     $("#currentWindSpd").text(data.current.wind_speed);
@@ -419,8 +428,6 @@ fetch(requextUrl)
 })
   
 }
-
-
 
 $("#searchBtn") .on("click", search);
 
