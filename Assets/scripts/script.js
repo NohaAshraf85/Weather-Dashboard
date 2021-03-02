@@ -329,6 +329,7 @@ function getLongLat(){
     long=0;
     lat=0;
   }
+ console.log(statesfound);
 }
 
 function addToLocalStorage(){
@@ -382,16 +383,19 @@ fetch(requextUrl)
 
 .then(function (data){
   for (var i=0; i<5; i++){
-    var date = new Date(data.daily[i].dt*1000);
-    $("#date"+i).text(moment(date).format("M/ D/ YYYY"));
-    $("#icon"+i).attr("src","http://openweathermap.org/img/wn/"+data.daily[i].weather[0].icon+"@2x.png");
-    $("#temp"+i).text(data.daily[i].temp.day);
-    $("#humidity"+i).text(data.daily[i].humidity);
+    var date = new Date(data.daily[i+1].dt*1000);
+    $("#date"+i).text(moment(date).format("M/D/YYYY"));
+    $("#icon"+i).attr("src","http://openweathermap.org/img/wn/"+data.daily[i+1].weather[0].icon+"@2x.png");
+    $("#temp"+i).text(data.daily[i+1].temp.day);
+    $("#humidity"+i).text(data.daily[i+1].humidity);
   }
 
+    console.log(data);  
     $("#currentCityName").text(statesfound.state);
     var date = new Date(data.current.dt*1000);
-    $("#currentDate").text(moment(date).format("M/ D/ YYYY"));
+    //console.log(date);
+    //moment(data.current.dt).format()
+    $("#currentDate").text(moment(date).format("dddd, MMMM Do"));
     $("#currentTemp").text(data.current.temp);
     $("#currentHumidity").text(data.current.humidity);
     $("#currentWindSpd").text(data.current.wind_speed);

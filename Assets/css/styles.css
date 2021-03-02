@@ -15,7 +15,7 @@ body{
     color: blanchedalmond;
 }
 
-.weatherInformation{azq 
+.weatherInformation{ 
     border: solid 1px grey;
     padding: 15px;
     color: white;
@@ -77,3 +77,8 @@ p{
 margin-left: 10px;
 margin-top: 20px;
 }
+
+h3{
+    color: whitesmoke;
+}
+
