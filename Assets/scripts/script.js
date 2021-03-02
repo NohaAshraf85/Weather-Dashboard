@@ -258,6 +258,7 @@ $( document ).ready(function() {
     storedLocations=searchedItems;
     renderSidebar();
   }
+ 
   
   var substringMatcher = function(strs) {
     return function findMatches(q, cb) {
@@ -328,7 +329,6 @@ function getLongLat(){
     long=0;
     lat=0;
   }
- console.log(statesfound);
 }
 
 function addToLocalStorage(){
@@ -356,6 +356,7 @@ function renderSidebar()
   {
     renderedHtml+="<button type='button' class='list-group-item list-group-item-action' onclick='displayItemresults("+i+")' value='"+i+"'>"+storedLocations[i].state+"</button>"
     
+    
   }
   $("#savedStates").html(renderedHtml);
  
@@ -382,18 +383,15 @@ fetch(requextUrl)
 .then(function (data){
   for (var i=0; i<5; i++){
     var date = new Date(data.daily[i].dt*1000);
-    $("#date"+i).text(moment(date).format("dddd, MMMM Do"));
+    $("#date"+i).text(moment(date).format("M/ D/ YYYY"));
     $("#icon"+i).attr("src","http://openweathermap.org/img/wn/"+data.daily[i].weather[0].icon+"@2x.png");
     $("#temp"+i).text(data.daily[i].temp.day);
     $("#humidity"+i).text(data.daily[i].humidity);
   }
 
-    console.log(data);  
     $("#currentCityName").text(statesfound.state);
     var date = new Date(data.current.dt*1000);
-    //console.log(date);
-    //moment(data.current.dt).format()
-    $("#currentDate").text(moment(date).format("dddd, MMMM Do"));
+    $("#currentDate").text(moment(date).format("M/ D/ YYYY"));
     $("#currentTemp").text(data.current.temp);
     $("#currentHumidity").text(data.current.humidity);
     $("#currentWindSpd").text(data.current.wind_speed);
@@ -421,3 +419,10 @@ fetch(requextUrl)
 
 
 $("#searchBtn") .on("click", search);
+
+
+
+
+
+
+
