@@ -224,7 +224,7 @@ async function search(event){
 
 async function getLongLat(){
 
-  var longLatUrl = "http://api.openweathermap.org/data/2.5/forecast?q="+$("#searchInput").val()+"&appid=c87e1cc3e31fb388f96417708873f99c"
+  var longLatUrl = "https://api.openweathermap.org/data/2.5/forecast?q="+$("#searchInput").val()+"&appid=c87e1cc3e31fb388f96417708873f99c"
 
   await fetch(longLatUrl)
   .then(function(response){
@@ -330,14 +330,14 @@ fetch(requextUrl)
   for (var i=0; i<5; i++){
     var date = new Date(data.daily[i+1].dt*1000);
     $("#date"+i).text(moment(date).format("M/D/YYYY"));
-    $("#icon"+i).attr("src","http://openweathermap.org/img/wn/"+data.daily[i+1].weather[0].icon+"@2x.png");
+    $("#icon"+i).attr("src","https://openweathermap.org/img/wn/"+data.daily[i+1].weather[0].icon+"@2x.png");
     $("#temp"+i).text(data.daily[i+1].temp.day);
     $("#humidity"+i).text(data.daily[i+1].humidity);
   }
 
     $("#currentCityName").text(statesfound.state);
     var date = new Date(data.current.dt*1000);
-    $("#iconCurrent").attr("src","http://openweathermap.org/img/wn/"+data.current.weather[0].icon+"@2x.png");
+    $("#iconCurrent").attr("src","https://openweathermap.org/img/wn/"+data.current.weather[0].icon+"@2x.png");
     console.log(data.current);
     $("#currentDate").text(moment(date).format("M/D/YYYY"));
     $("#currentTemp").text(data.current.temp);
