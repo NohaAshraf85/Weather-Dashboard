@@ -1,258 +1,161 @@
 var states=[
   {
-    "state":"Alaska",
-    "latitude":61.3850,
-    "longitude":-152.2683
+    "state":"Alaska"
+   
   },
   {
-    "state":"Alabama",
-    "latitude":32.7990,
-    "longitude":-86.8073
+    "state":"Alabama"
+    
   },
   {
-    "state":"Arkansas",
-    "latitude":34.9513,
-    "longitude":-92.3809
+    "state":"Arkansas"
+   
   },
   {
-    "state":"Arizona",
-    "latitude":33.7712,
-    "longitude":-111.3877
+    "state":"Arizona"
+    
   },
   {
-    "state":"California",
-    "latitude":36.1700,
-    "longitude":-119.7462
+    "state":"California"
   },
   {
-    "state":"Colorado",
-    "latitude":39.0646,
-    "longitude":-105.3272
+    "state":"Colorado"
   },
   {
-    "state":"Connecticut",
-    "latitude":41.5834,
-    "longitude":-72.7622
+    "state":"Connecticut"
   },
   {
-    "state":"Delaware",
-    "latitude":39.3498,
-    "longitude":-75.5148
+    "state":"Delaware"
   },
   {
-    "state":"Florida",
-    "latitude":27.8333,
-    "longitude":-81.7170
+    "state":"Florida"
   },
   {
-    "state":"Georgia",
-    "latitude":32.9866,
-    "longitude":-83.6487
+    "state":"Georgia"
   },
   {
-    "state":"Hawaii",
-    "latitude":21.1098,
-    "longitude":-157.5311
+    "state":"Hawaii"
   },
   {
-    "state":"Iowa",
-    "latitude":42.0046,
-    "longitude":-93.2140
+    "state":"Iowa"
   },
   {
-    "state":"Idaho",
-    "latitude":44.2394,
-    "longitude":-114.5103
+    "state":"Idaho"
   },
   {
-    "state":"Illinois",
-    "latitude":40.3363,
-    "longitude":-89.0022
+    "state":"Illinois"
   },
   {
-    "state":"Indiana",
-    "latitude":39.8647,
-    "longitude":-86.2604
+    "state":"Indiana"
   },
   {
-    "state":"Kansas",
-    "latitude":38.5111,
-    "longitude":-96.8005
+    "state":"Kansas"
   },
   {
-    "state":"Kentucky",
-    "latitude":37.6690,
-    "longitude":-84.6514
+    "state":"Kentucky"
   },
   {
-    "state":"Louisiana",
-    "latitude":31.1801,
-    "longitude":-91.8749
+    "state":"Louisiana"
   },
   {
-    "state":"Massachusetts",
-    "latitude":42.2373,
-    "longitude":-71.5314
+    "state":"Massachusetts"
   },
   {
-    "state":"Maryland",
-    "latitude":39.0724,
-    "longitude":-76.7902
+    "state":"Maryland"
   },
   {
-    "state":"Maine",
-    "latitude":44.6074,
-    "longitude":-69.3977
+    "state":"Maine"
   },
   {
-    "state":"Michigan",
-    "latitude":43.3504,
-    "longitude":-84.5603
+    "state":"Michigan"
   },
   {
-    "state":"Minnesota",
-    "latitude":45.7326,
-    "longitude":-93.9196
+    "state":"Minnesota"
   },
   {
-    "state":"Missouri",
-    "latitude":38.4623,
-    "longitude":-92.3020
+    "state":"Missouri"
   },
   {
-    "state":"Mississippi",
-    "latitude":32.7673,
-    "longitude":-89.6812
+    "state":"Mississippi"
   },
   {
-    "state":"Montana",
-    "latitude":46.9048,
-    "longitude":-110.3261
+    "state":"Montana"
   },
   {
-    "state":"North Carolina",
-    "latitude":35.6411,
-    "longitude":-79.8431
+    "state":"North Carolina"
   },
   {
-    "state":"North Dakota",
-    "latitude":47.5362,
-    "longitude":-99.7930
+    "state":"North Dakota"
   },
   {
-    "state":"Nebraska",
-    "latitude":41.1289,
-    "longitude":-98.2883
+    "state":"Nebraska"
   },
   {
-    "state":"New Hampshire",
-    "latitude":43.4108,
-    "longitude":-71.5653
+    "state":"New Hampshire"
   },
   {
-    "state":"New Jersey",
-    "latitude":40.3140,
-    "longitude":-74.5089
+    "state":"New Jersey"
   },
   {
-    "state":"New Mexico",
-    "latitude":34.8375,
-    "longitude":-106.2371
+    "state":"New Mexico"
   },
   {
-    "state":"Nevada",
-    "latitude":38.4199,
-    "longitude":-117.1219
+    "state":"Nevada"
   },
   {
-    "state":"New York",
-    "latitude":42.1497,
-    "longitude":-74.9384
+    "state":"New York"
   },
   {
-    "state":"Ohio",
-    "latitude":40.3736,
-    "longitude":-82.7755
+    "state":"Ohio"
   },
   {
-    "state":"Oklahoma",
-    "latitude":35.5376,
-    "longitude":-96.9247
+    "state":"Oklahoma"
   },
   {
-    "state":"Oregon",
-    "latitude":44.5672,
-    "longitude":-122.1269
+    "state":"Oregon"
   },
   {
-    "state":"Pennsylvania",
-    "latitude":40.5773,
-    "longitude":-77.2640
+    "state":"Pennsylvania"
   },
   {
-    "state":"Rhode Island",
-    "latitude":41.6772,
-    "longitude":-71.5101
+    "state":"Rhode Island"
   },
   {
-    "state":"South Carolina",
-    "latitude":33.8191,
-    "longitude":-80.9066
+    "state":"South Carolina"
   },
   {
-    "state":"South Dakota",
-    "latitude":44.2853,
-    "longitude":-99.4632
+    "state":"South Dakota"
   },
   {
-    "state":"Tennessee",
-    "latitude":35.7449,
-    "longitude":-86.7489
+    "state":"Tennessee"
   },
   {
-    "state":"Texas",
-    "latitude":31.1060,
-    "longitude":-97.6475
+    "state":"Texas"
   },
   {
-    "state":"Utah",
-    "latitude":40.1135,
-    "longitude":-111.8535
+    "state":"Utah"
   },
   {
-    "state":"Virginia",
-    "latitude":37.7680,
-    "longitude":-78.2057
+    "state":"Virginia"
   },
   {
-    "state":"Vermont",
-    "latitude":44.0407,
-    "longitude":-72.7093
+    "state":"Vermont"
   },
   {
-    "state":"Washington",
-    "latitude":47.3917,
-    "longitude":-121.5708
+    "state":"Washington"
   },
   {
-    "state":"Wisconsin",
-    "latitude":44.2563,
-    "longitude":-89.6385
+    "state":"Wisconsin"
   },
   {
-    "state":"West Virginia",
-    "latitude":38.4680,
-    "longitude":-80.9696
+    "state":"West Virginia"
   },
   {
-    "state":"Wyoming",
-    "latitude":42.7475,
-    "longitude":-107.2085
+    "state":"Wyoming"
   }
 ];
 
-var long=0;
-var lat=0;
+
 var statesfound;
 var storedLocations=[];
 
@@ -301,10 +204,9 @@ $( document ).ready(function() {
   });
 });
 
-function search(event){
-  long=0;
-  lat=0;
-  getLongLat();
+async function search(event){
+
+  await getLongLat();
   if(statesfound!=null)
   {
     $("#warning").css("display","none");
@@ -320,14 +222,39 @@ function search(event){
 
 }
 
-function getLongLat(){
+async function getLongLat(){
 
-  var statesfoundArr= states.filter((city)=>city.state.toLowerCase()==$("#searchInput").val().toLowerCase());
-  if(statesfoundArr.length>=1)
+  var longLatUrl = "http://api.openweathermap.org/data/2.5/forecast?q="+$("#searchInput").val()+"&appid=c87e1cc3e31fb388f96417708873f99c"
+
+  await fetch(longLatUrl)
+  .then(function(response){
+    return response.json();
+  })
+
+  .then(function (data)
   {
-    statesfound=statesfoundArr[0];
-    long=statesfound.longitude;
-    lat=statesfound.latitude;    
+    if(data.cod==404)
+    {
+      statesfound=null;
+      long=0;
+      lat=0;
+      return;
+    }
+
+    var statesfoundArr= states.filter((city)=>city.state.toLowerCase()==$("#searchInput").val().toLowerCase());
+if(statesfoundArr!=null&&statesfoundArr.length>=1 && data.city.coord.lat && data.city.coord.lon)
+  {
+    statesfound=
+    {
+      
+      "state":statesfoundArr[0].state,
+      "latitude":data.city.coord.lat,
+    "longitude":data.city.coord.lon
+
+    }
+    
+    long=data.city.coord.lon;
+    lat=data.city.coord.lat;    
   }
   else
   {
@@ -335,6 +262,10 @@ function getLongLat(){
     long=0;
     lat=0;
   }
+  });
+
+
+  
 }
 
 function addToLocalStorage(){
@@ -406,6 +337,8 @@ fetch(requextUrl)
 
     $("#currentCityName").text(statesfound.state);
     var date = new Date(data.current.dt*1000);
+    $("#iconCurrent").attr("src","http://openweathermap.org/img/wn/"+data.current.weather[0].icon+"@2x.png");
+    console.log(data.current);
     $("#currentDate").text(moment(date).format("M/D/YYYY"));
     $("#currentTemp").text(data.current.temp);
     $("#currentHumidity").text(data.current.humidity);
