@@ -433,6 +433,14 @@ fetch(requextUrl)
 
 $("#searchBtn") .on("click", search);
 
+var clearBtn = document.querySelector("#clearBtn");
+clearBtn.addEventListener("click", clearSearch);
+
+function clearSearch (){
+  storedLocations=[];
+  localStorage.setItem("storedLocations",JSON.stringify(storedLocations));
+  renderSidebar();
+}
 
 
 
